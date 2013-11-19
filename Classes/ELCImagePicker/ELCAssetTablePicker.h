@@ -13,7 +13,7 @@
 
 @interface ELCAssetTablePicker : UITableViewController <ELCAssetDelegate>
 
-@property (nonatomic, weak) id <ELCAssetSelectionDelegate> parent;
+@property (nonatomic, assign) id <ELCAssetSelectionDelegate> parent;
 @property (nonatomic, strong) ALAssetsGroup *assetGroup;
 @property (nonatomic, strong) NSMutableArray *elcAssets;
 @property (nonatomic, strong) IBOutlet UILabel *selectedAssetsLabel;
@@ -21,7 +21,7 @@
 @property (nonatomic, assign) BOOL immediateReturn;
 
 // optional, can be used to filter the assets displayed
-@property(nonatomic, weak) id<ELCAssetPickerFilterDelegate> assetPickerFilterDelegate;
+@property(nonatomic, assign) id<ELCAssetPickerFilterDelegate> assetPickerFilterDelegate;
 
 - (int)totalSelectedAssets;
 - (void)preparePhotos;
